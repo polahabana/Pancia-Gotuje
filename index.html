@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#f4f0e7" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Pańcia gotuje" />
+  <title>Pańcia gotuje</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div id="app">
+  <header class="topbar">
+    <button class="icon-btn back hidden" id="backBtn" aria-label="Wróć">←</button>
+    <div class="brand"><h1 id="pageTitle">Pańcia gotuje</h1><p id="pageSubtitle">Tu mieszkają najlepsze przepisy</p></div>
+    <button class="icon-btn hidden" id="headerAction" aria-label="Akcja"></button>
+  </header>
+  <main id="view"></main>
+  <nav class="bottom-nav">
+    <button data-route="home" class="active"><span>⌂</span><small>Start</small></button>
+    <button data-route="categories"><span>▦</span><small>Kategorie</small></button>
+    <button data-route="add" class="add-nav"><span>＋</span></button>
+    <button data-route="search"><span>⌕</span><small>Szukaj</small></button>
+    <button data-route="settings"><span>☰</span><small>Menu</small></button>
+  </nav>
+</div>
+<div id="toast"></div>
+<input id="cameraInput" type="file" accept="image/*" capture="environment" hidden>
+<input id="galleryInput" type="file" accept="image/*" hidden>
+<script src="app.js"></script>
+</body>
+</html>
